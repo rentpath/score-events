@@ -10,8 +10,4 @@
   (component/system-map
     :event-ticker (t/->EventTicker event-chan 100)))
 
-(defn start-system
-  [event-chan]
-  (let [system (->application event-chan)]
-    (component/start-system system)
-    system))
+(def start-system (comp component/start-system ->application))

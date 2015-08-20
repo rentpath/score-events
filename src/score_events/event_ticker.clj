@@ -5,18 +5,19 @@
 
 (defn get-event
   []
-  (rand-nth
-    (concat
-      (repeat 40 "PushEvent")
-      (repeat 25 "PullRequestReviewCommentEvent")
-      (repeat 5 "WatchEvent")
-      (repeat 5 "CreateEvent")
-      (repeat 2 "ForkEvent"))))
+  (let [event-type (rand-nth
+                     (concat
+                       (repeat 40 "PushEvent")
+                       (repeat 25 "PullRequestReviewCommentEvent")
+                       (repeat 5 "WatchEvent")
+                       (repeat 5 "CreateEvent")
+                       (repeat 2 "ForkEvent")))
+        user (rand-nth ["Mike" "Nancy" "Oscar" "Paula"])]
+    [user event-type]))
 
 (defn enqueue-event
   [output-chan]
-  (a/go
-    (a/>! output-chan (get-event))))
+  (a/put! output-chan (get-event)))
 
 (defrecord EventTicker
   [output-chan sweeper-delay]
