@@ -4,7 +4,17 @@ A Clojure library designed to ... well, that part is up to you.
 
 ## Usage
 
-FIXME
+In this project we will be logging and scoring events.  
+
+Events are scored based on this table.  
+
+| Event Type | Points |
+|------------|---|
+| PushEvent  | 5 |
+| PullRequestReviewCommentEvent | 4 |
+| WatchEvent  | 3 |
+| CreateEvent | 2 |
+| Every other event | 1 |
 
 ## License
 
