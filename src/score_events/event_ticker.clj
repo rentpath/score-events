@@ -24,10 +24,8 @@
   (start [this]
     (println "Ticker Starting")
     (let [timer (Timer.)
-          tick-fn (enqueue-event output-chan)
           task (proxy [TimerTask] []
-                 (run []
-                   (tick-fn)))]
+                 (run [] (enqueue-event output-chan)))]
 
       (.schedule timer task sweeper-delay sweeper-delay)
       (assoc this :timer timer)))
