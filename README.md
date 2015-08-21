@@ -18,7 +18,8 @@ To kick the process off, call `core.start-system`, passing in a core.async chann
 - Log event activity to a sink of your choosing (STDOUT / log file / log store, whatever)
 
 ## Stretch Goals (choose your own adventure!)
-If you've cleared the first set of goals and are hungry for more, take some time to consider how you'd reach one of the stretch goals listed below. We're interested in how you'd architect your solution; if you feel like coding a solution, go for it!
+If you've cleared the first set of goals and are hungry for more, take some hammock time to consider how you'd reach one of the stretch goals listed below.
+We're interested in how you'd architect your solution, but if you feel like coding a solution, we won't stop you.
 
 ### Live updates in browser
 Reflect changes in DOM without user having to refresh page
@@ -28,11 +29,7 @@ Using this format `https://api.github.com/users/:user/events`, you can acquire r
 Maybe you'd like to crunch the numbers of some prominent clojure hackers?
 
 ### User session management
-Maybe users shouldn't be able to see one another's scorecards?
-
-### Code quality metrics
-Mock out a service which will rate the code quality of each commit (for our purposes, the scores can be random).
-Include the code quality metric in a users' scorecard
+Maybe a user should only be able to see his/her own score-card?
 
 ### [Define your own]
 It's your system -- go wild!
