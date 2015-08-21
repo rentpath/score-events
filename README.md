@@ -15,11 +15,11 @@ To kick the process off, call `core.start-system`, passing in a core.async chann
 - Use `component` library to start and stop the system.
 - Compute aggregate scores for each github user, using the table provided below.
 - Display users' github score in a web-page.
-- Log event activity to a sink of your choosing (STDOUT / log file / log store, whatever)
+- Log event activity to a sink of your choosing (stdout / log-file / log-store / wherever)
 
-## Stretch Goals (choose your own adventure!)
-If you've cleared the first set of goals and are hungry for more, take some hammock time to consider how you'd reach one of the stretch goals listed below.
-We're interested in how you'd architect your solution, but if you feel like coding a solution, we won't stop you.
+## Stretch Goals (optional)
+If you've cleared the first set of goals and are hungry for more, take some hammock time to consider how you'd reach 1-2 of the stretch goals listed below.
+We're interested in how you'd architect a solution, but if you just _have_ to code something, we won't try to stop you.
 
 ### Live updates in browser
 Reflect changes in DOM without user having to refresh page
@@ -28,16 +28,15 @@ Reflect changes in DOM without user having to refresh page
 Using this format `https://api.github.com/users/:user/events`, you can acquire recent activity for a github user.
 Maybe you'd like to crunch the numbers of some prominent clojure hackers?
 
-### User session management
+### User authentication/authorization
 Maybe a user should only be able to see his/her own score-card?
 
-### [Define your own]
+### [Choose your own adventure]
 It's your system -- go wild!
 some ideas:
 - use datascript to manage client state
 - replace leiningen with boot-clj
 - statistical analysis of contributions -- who's busy when?
-
 
 ## Event scoring
 
